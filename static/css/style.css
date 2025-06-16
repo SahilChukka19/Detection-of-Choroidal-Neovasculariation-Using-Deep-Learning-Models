@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  overflow-x: hidden;
+  
+}
+.webgl{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #211c21;
+}
+
+nav{
+  color:aliceblue;
+  z-index: 2;
+  position: relative;
+  padding: 2rem 8rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Archivo Black', sans-serif;
+  align-items: center;
+}
+
+nav .logo{
+  text-decoration: none;
+  color:rgb(225, 153, 20);
+  font-weight: bold;
+  font-size: 4.5vh;
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  font-size: 20px;
+}
+
+.title{
+  font-family: 'Archivo Black', sans-serif;
+  color: aliceblue;
+  z-index: 2;
+  position: absolute;
+  font-size: 4.5vh;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -25%);
+}
+.form{
+  position: absolute;
+  z-index: 2;
+  left:50%;
+  top: 75%;
+  transform: translate(-50%, -25%);
+}
+#imageUpload{
+font-size: 2.5vh;
+font-family: 'Archivo Black', sans-serif;
+color:aliceblue;
+}
+#upload{
+  font-size: 2.5vh;
+  font-family: 'Archivo Black', sans-serif;
+  border-radius: 25px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: 3px solid;
+  background-color: rgb(235, 233, 228);
+}
+li a{
+  text-decoration: none;
+  color:aliceblue;
+}
+li a:hover{
+  color:rgb(225, 153, 20);
+}
+.container{
+  padding: 5vw 15vw;
+  color:aliceblue;
+  font-family: 'Archivo', sans-serif;
+  letter-spacing: 1.8px;
+  line-height: 22px;
+}
+.steps{
+  font-weight: bold;
+}
+.cnv{
+  display:flex;
+  gap:150px;
+  justify-content: space-between;
+}
+.cnvimage{
+  width: 20vw;
+  height:20vw
+}
+.predict_con{
+  display:flex;
+  justify-content: space-evenly;
+  padding: 5rem 8rem;
+}
+
+.title1{
+  font-family: 'Archivo Black', sans-serif;
+  color: aliceblue;
+  font-size: 2.5vw;
+  padding: 3rem 0;;
+}
+.prediction1{
+  color:aliceblue;
+  font-family: 'Archivo Black', sans-serif;
+}
+.prediction1 h1{
+  color:rgb(225, 153, 20);
+}
+.prediction1 h2{
+  padding: 10px 0px;
+  font-size: 20px;
+  color:aliceblue;
+}
+.insert{
+  padding: 0 2vw;
+}
+.submod{
+  font-size: 2.5vh;
+  font-family: 'Archivo Black', sans-serif;
+  border-radius: 25px;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: none;
+  background-color: rgb(225, 153, 20);
+}
+.form1 div, .form div{
+  font-family: 'Archivo Black', sans-serif;
+  color: aliceblue;
+  font-size: 2.5vh;
+}

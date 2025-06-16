@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="static/faticon.png" />
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DTech</title>
+  </head>
+  <body style="background-color:#211c21;">
+    <nav style=" color:aliceblue;
+    z-index: 2;
+    position: relative;
+    padding: 4rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Archivo Black', sans-serif;
+    align-items: center;">
+      <a href="/" class="logo" style="text-decoration: none;
+      color:#E19914;">Dtech</a>
+      <ul>
+        <li><a href="/" style="text-decoration: none;">Home</a></li>
+        <li><a href="/about.html" style="text-decoration: none;">About</a></li>
+      </ul>
+    </nav>
+    <!--main body-->
+    <div class="predict_con">
+      <div class="insert">
+        <div>
+         <h1 class="title1">Insert an OCT image</h1>
+        </div>
+        <div>
+          <form action="/submit"  method="post" enctype="multipart/form-data" class="form1">
+           <input type="file" id="imageUpload" name="my_image" accept="image/*"><br>
+           <div>Select Deep Learning model:</div>
+           <select name="model" id="model" class="form-control selectpicker" data-live-search="true" multiple>
+              <option value="cnn">CNN</option>
+              <option value="resnet18">ResNet18</option>
+              <option value="resnet50">ResNet50</option>
+              <option value="vggnet16">VggNet16</option>
+              <option value="vggnet19">VggNet19</option>
+              <option value="inceptionv3">InceptionV3</option>
+              <option value="mobilenetv2">MobileNetV2</option>
+              <option value="efficientnetv2l">EfficientNetV2L</option>
+              <option value="vit">Vision Transformer</option>
+            </select>
+            <br /><br />
+            <input type="submit" name="submitmodel" class="submod" value="Submit" />
+         </form>
+        </div>
+      </div>
+      <div class="prediction1">
+        {% if prediction %}
+        <h1>Result</h1>
+        <img src="{{img_path}}" height="350px" width="350px">
+        <h2> Model : <i> {{model_info}} </i></h2>
+        <h2> Prediction   : <i> {{prediction}} </i></h2>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
