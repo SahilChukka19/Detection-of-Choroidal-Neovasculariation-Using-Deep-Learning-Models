@@ -62,5 +62,5 @@ CNV: Choroidal Neovascularization present
 Normal: No abnormality detected
 
 ## 🙋‍♂️ Contributors
-@SahilChukka19 – Core Development, Model Integration
-@Voxovoxo      – Model Intergration, Web Designing
+### @SahilChukka19 – Core Development, Model Integration
+### @Voxovoxo      – Model Intergration, Web Designing
